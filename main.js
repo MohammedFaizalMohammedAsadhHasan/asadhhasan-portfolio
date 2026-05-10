@@ -47,7 +47,7 @@ const projects = [
         title: 'Voice Assist Home Automation System With IoT Module',
         desc: 'An innovative IoT-based home automation system controlled via voice commands.',
         tech: ['C++', 'IoT', 'Arduino'],
-        image: 'https://images.unsplash.com/photo-1589149098258-3e9102ca93d3?auto=format&fit=crop&q=80&w=800',
+        image: 'assets/smarthome.png',
         github: '#',
         live: '#'
     },
@@ -71,7 +71,7 @@ const projects = [
         title: 'Blood Bank Management System',
         desc: 'A specialized system for tracking blood inventory and managing donor data with type-safe architecture.',
         tech: ['TypeScript', 'Node.js', 'PostgreSQL'],
-        image: 'https://images.unsplash.com/photo-1579154236594-e179ff303534?auto=format&fit=crop&q=80&w=800',
+        image: 'assets/qurban.png',
         github: 'https://github.com/MohammedFaizalMohammedAsadhHasan/Blood-Bank',
         live: '#'
     },
