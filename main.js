@@ -28,31 +28,31 @@ const skills = [
 const projects = [
     {
         title: 'AL-FARU Megamall Website',
-        desc: 'A comprehensive e-commerce solution for a megamall.',
+        desc: 'A premium, modern e-commerce platform for a large luxury retail mall.',
         tech: ['React', 'Spring Boot', 'MySQL'],
-        image: '/assets/project1.png',
+        image: 'assets/megamall.png',
         github: '#',
         live: '#'
     },
     {
         title: 'Event Ticket Booking System',
-        desc: 'Real-time ticket booking with interactive seating maps.',
+        desc: 'Real-time event ticket booking platform with interactive seating maps.',
         tech: ['Java', 'Spring Boot', 'MongoDB'],
-        image: 'https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&q=80&w=800',
+        image: 'https://images.unsplash.com/photo-1540039155733-5bb30b53aa14?auto=format&fit=crop&q=80&w=800',
         github: '#',
         live: '#'
     },
     {
         title: 'Skills Craft Academy System',
-        desc: 'Learning management system for skill development.',
+        desc: 'Comprehensive learning management system for skill development and academy management.',
         tech: ['React', 'Node.js', 'PostgreSQL'],
-        image: 'https://images.unsplash.com/photo-1501504905252-473c47e087f8?auto=format&fit=crop&q=80&w=800',
+        image: 'https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&q=80&w=800',
         github: '#',
         live: '#'
     },
     {
-        title: 'Kids Toys Website',
-        desc: 'Interactive and playful UI for an online toy store.',
+        title: 'Kids Toys Online Store',
+        desc: 'An interactive and playful e-commerce experience designed for an online toy store.',
         tech: ['HTML', 'CSS', 'JS'],
         image: 'https://images.unsplash.com/photo-1532330393533-443990a51d10?auto=format&fit=crop&q=80&w=800',
         github: '#',
@@ -60,9 +60,9 @@ const projects = [
     },
     {
         title: 'Qurban Smart System',
-        desc: 'Digital management for Qurban activities and distribution.',
+        desc: 'Digital management platform for Qurban activities and distribution tracking.',
         tech: ['React', 'Firebase'],
-        image: '/assets/project3.png',
+        image: 'assets/qurban.png',
         github: '#',
         live: '#'
     },
@@ -76,9 +76,9 @@ const projects = [
     },
     {
         title: 'Blood Donor Smart System',
-        desc: 'Platform connecting blood donors with hospitals and patients.',
+        desc: 'Digital platform connecting blood donors with hospitals and urgent patient needs.',
         tech: ['React Native', 'Node.js'],
-        image: '/assets/project2.png',
+        image: 'https://images.unsplash.com/photo-1615461066841-6116e61058f4?auto=format&fit=crop&q=80&w=800',
         github: '#',
         live: '#'
     }
