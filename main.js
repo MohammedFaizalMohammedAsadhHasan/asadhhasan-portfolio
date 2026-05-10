@@ -47,7 +47,7 @@ const projects = [
         title: 'Voice Assist Home Automation System With IoT Module',
         desc: 'An innovative IoT-based home automation system controlled via voice commands.',
         tech: ['C++', 'IoT', 'Arduino'],
-        image: 'https://images.unsplash.com/photo-1558002038-1037906d9971?auto=format&fit=crop&q=80&w=800',
+        image: 'https://images.unsplash.com/photo-1589149098258-3e9102ca93d3?auto=format&fit=crop&q=80&w=800',
         github: '#',
         live: '#'
     },
