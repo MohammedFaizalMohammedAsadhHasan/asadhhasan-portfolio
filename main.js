@@ -4,99 +4,68 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
 
 // --- Data ---
-const skillCategories = [
-    {
-        title: 'Technical Development',
-        skills: [
-            { name: 'HTML', icon: 'html' },
-            { name: 'CSS', icon: 'css' },
-            { name: 'JavaScript', icon: 'js' },
-            { name: 'TypeScript', icon: 'ts' },
-            { name: 'React', icon: 'react' },
-            { name: 'Java', icon: 'java' },
-            { name: 'Spring Boot', icon: 'spring' },
-            { name: 'MySQL', icon: 'mysql' },
-            { name: 'MongoDB', icon: 'mongodb' },
-            { name: 'Vite', icon: 'vite' },
-            { name: 'GitHub', icon: 'github' }
-        ]
-    },
-    {
-        title: 'Special Creative Skills',
-        skills: [
-            { name: 'Canva', icon: 'canva' },
-            { name: 'CapCut', icon: 'capcut' },
-            { name: 'Video Editing', icon: 'video' },
-            { name: 'Poster Design', icon: 'canva' },
-            { name: 'Banner Design', icon: 'canva' }
-        ]
-    },
-    {
-        title: 'Office & Productivity',
-        skills: [
-            { name: 'MS Word', icon: 'word' },
-            { name: 'MS Excel', icon: 'excel' },
-            { name: 'MS PowerPoint', icon: 'pp' },
-            { name: 'MS Access', icon: 'mysql' }
-        ]
-    }
+const skills = [
+    { name: 'HTML', icon: 'html' },
+    { name: 'CSS', icon: 'css' },
+    { name: 'JavaScript', icon: 'js' },
+    { name: 'React', icon: 'react' },
+    { name: 'Java', icon: 'java' },
+    { name: 'Spring Boot', icon: 'spring' },
+    { name: 'MySQL', icon: 'mysql' },
+    { name: 'MongoDB', icon: 'mongodb' },
+    { name: 'Canva', icon: 'canva' },
+    { name: 'CapCut', icon: 'capcut' },
+    { name: 'TypeScript', icon: 'ts' },
+    { name: 'Vite', icon: 'vite' },
+    { name: 'Video Editing', icon: 'video' },
+    { name: 'Poster Design', icon: 'canva' },
+    { name: 'Banner Design', icon: 'canva' },
+    { name: 'GitHub', icon: 'github' },
+    { name: 'MS Word', icon: 'word' },
+    { name: 'MS Excel', icon: 'excel' },
+    { name: 'MS PowerPoint', icon: 'pp' },
+    { name: 'MS Access', icon: 'mysql' }
 ];
 
 const projects = [
     {
-        title: 'Voice Assist Home Automation System With IoT Module',
-        desc: 'A smart home automation system developed using IoT technology and voice assistant integration to control household devices efficiently. The system allows users to manage lights, fans, doors, and electronic appliances through voice commands and mobile connectivity. Designed with modern automation concepts, real-time monitoring, and secure device communication to improve convenience, energy efficiency, and smart living experiences.',
-        tech: ['C++', 'IoT', 'Arduino'],
-        image: 'https://images.unsplash.com/photo-1558002038-1037906d9971?auto=format&fit=crop&q=80&w=800',
+        title: 'AL-FARU Megamall Website',
+        desc: 'A premium, modern e-commerce platform for a large luxury retail mall.',
+        tech: ['React', 'Spring Boot', 'MySQL'],
+        image: 'assets/megamall.png',
         github: '#',
         live: '#'
     },
     {
-        title: 'Kid-Toys E-commerce',
-        desc: 'A comprehensive online store for toys with interactive product catalogs and shopping cart.',
-        tech: ['HTML', 'CSS', 'JavaScript'],
-        image: 'https://images.unsplash.com/photo-1532330393533-443990a51d10?auto=format&fit=crop&q=80&w=800',
-        github: 'https://github.com/MohammedFaizalMohammedAsadhHasan/Kid-Toys',
-        live: '#'
-    },
-    {
         title: 'Event Ticket Booking System',
-        desc: 'Real-time event ticket booking platform with interactive seating maps and automated ticketing.',
+        desc: 'Real-time event ticket booking platform with interactive seating maps.',
         tech: ['Java', 'Spring Boot', 'MongoDB'],
         image: 'https://images.unsplash.com/photo-1540039155733-5bb30b53aa14?auto=format&fit=crop&q=80&w=800',
         github: '#',
         live: '#'
     },
     {
-        title: 'Blood Bank Management System',
-        desc: 'A modern Blood Bank Management System designed to streamline donor registration, blood inventory management, blood request processing, and hospital coordination. The system improves efficiency, accuracy, and data security by digitizing blood bank operations with a user-friendly interface and centralized database management. Developed to support fast emergency response and effective healthcare service management.',
-        tech: ['TypeScript', 'Node.js', 'PostgreSQL'],
-        image: 'https://images.unsplash.com/photo-1579154236594-e179ff303534?auto=format&fit=crop&q=80&w=800',
-        github: 'https://github.com/MohammedFaizalMohammedAsadhHasan/Blood-Bank',
-        live: '#'
-    },
-    {
-        title: 'Online Book Management System',
-        desc: 'A digital library platform for managing book collections, lending, and user accounts.',
-        tech: ['Java', 'MySQL', 'Swing'],
-        image: 'https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=crop&q=80&w=800',
+        title: 'Skills Craft Academy System',
+        desc: 'Comprehensive learning management system for skill development and academy management.',
+        tech: ['React', 'Node.js', 'PostgreSQL'],
+        image: 'https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&q=80&w=800',
         github: '#',
         live: '#'
     },
     {
-        title: 'Indoor Plant Disease Detection',
-        desc: 'An AI-powered system for detecting diseases in indoor plants through image recognition.',
-        tech: ['Python', 'TensorFlow', 'OpenCV'],
-        image: 'https://images.unsplash.com/photo-1545239351-ef35f43d514b?auto=format&fit=crop&q=80&w=800',
+        title: 'Kids Toys Online Store',
+        desc: 'An interactive and playful e-commerce experience designed for an online toy store.',
+        tech: ['HTML', 'CSS', 'JS'],
+        image: 'https://images.unsplash.com/photo-1532330393533-443990a51d10?auto=format&fit=crop&q=80&w=800',
         github: '#',
         live: '#'
     },
     {
-        title: 'IT Service Management System',
-        desc: 'A major university project focusing on streamlining ticketing and IT support workflows.',
-        tech: ['MERN Stack', 'Redux', 'Git'],
-        image: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=800',
-        github: 'https://github.com/MohammedFaizalMohammedAsadhHasan/Project-Finalized-',
+        title: 'Qurban Smart System',
+        desc: 'Digital management platform for Qurban activities and distribution tracking.',
+        tech: ['React', 'Firebase'],
+        image: 'assets/qurban.png',
+        github: '#',
         live: '#'
     }
 ];
@@ -119,75 +88,9 @@ function initNavbarScroll() {
     });
 }
 
-// --- Initialization ---
-const init = () => {
-    hideLoader();
-    try {
-        initIcons();
-        initCursor();
-        renderSkills();
-        renderProjects();
-        renderTimeline();
-        initAnimations();
-        initParticles();
-        initThemeToggle();
-        initMagneticButtons();
-        initScrollProgress();
-        initNavbarScroll();
-    } catch (err) {
-        console.error('Initialization error:', err);
-    }
-};
-
-if (document.readyState === 'complete' || document.readyState === 'interactive') {
-    init();
-} else {
-    window.addEventListener('DOMContentLoaded', init);
-}
-
-function hideLoader() {
-    const loader = document.getElementById('loader');
-    if (loader) {
-        setTimeout(() => {
-            loader.classList.add('loader-hidden');
-        }, 500);
-    }
-}
-
-function initIcons() {
-    lucide.createIcons({
-        icons: lucide.icons
-    });
-}
-
-function initCursor() {
-    const cursor = document.querySelector('.custom-cursor');
-    const follower = document.querySelector('.cursor-follower');
-    
-    document.addEventListener('mousemove', (e) => {
-        gsap.to(cursor, { x: e.clientX, y: e.clientY, duration: 0 });
-        gsap.to(follower, { x: e.clientX - 10, y: e.clientY - 10, duration: 0.15 });
-    });
-
-    document.querySelectorAll('a, button').forEach(el => {
-        el.addEventListener('mouseenter', () => {
-            follower.style.transform += ' scale(2)';
-            follower.style.borderColor = 'var(--neon-blue)';
-        });
-        el.addEventListener('mouseleave', () => {
-            follower.style.transform = follower.style.transform.replace(' scale(2)', '');
-            follower.style.borderColor = 'var(--neon-purple)';
-        });
-    });
-}
-
 function renderSkills() {
     const container = document.getElementById('skills-container');
-    container.innerHTML = skillCategories.map(cat => `
-        <div class="skill-category">
-            <h3 class="category-title">${cat.title}</h3>
-            <div class="skills-grid">
-                ${cat.skills.map(skill => `
+    container.innerHTML = skills.map(skill => `
                     <div class="skill-card glass-card">
                         <div class="skill-icon">
                             ${skill.icon === 'canva' ? `
@@ -213,176 +116,182 @@ function renderSkills() {
                         </div>
                         <span>${skill.name}</span>
                     </div>
-                `).join('')}
-            </div>
-        </div>
     `).join('');
 }
 
 function renderProjects() {
     const container = document.getElementById('projects-container');
-    container.innerHTML = projects.map(proj => `
-        <div class="project-card glass-card">
-            <div class="project-img">
-                <img src="${proj.image}" alt="${proj.title}">
-                <div class="project-overlay">
-                    <div class="project-links">
-                        <a href="${proj.github}" target="_blank" class="btn-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
-                        </a>
-                        <a href="${proj.live}" target="_blank" class="btn-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>
-                        </a>
+    container.innerHTML = projects.map(project => `
+                    <div class="project-card glass-card reveal-up">
+                        <div class="project-image">
+                            <img src="${project.image}" alt="${project.title}">
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                    <a href="${project.github}" class="project-link magnetic" title="GitHub">
+                                        <i data-lucide="github"></i>
+                                    </a>
+                                    <a href="${project.live}" class="project-link magnetic" title="Live Demo">
+                                        <i data-lucide="external-link"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3>${project.title}</h3>
+                            <p>${project.desc}</p>
+                            <div class="project-tech">
+                                ${project.tech.map(t => `<span class="tech-tag">${t}</span>`).join('')}
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
-            <div class="project-info">
-                <h3>${proj.title}</h3>
-                <p>${proj.desc}</p>
-                <div class="project-tech">
-                    ${proj.tech.map(t => `<span class="tech-tag">${t}</span>`).join('')}
-                </div>
-            </div>
-        </div>
     `).join('');
-    lucide.createIcons({
-        icons: lucide.icons
-    });
 }
 
 function renderTimeline() {
     const container = document.getElementById('timeline-container');
     container.innerHTML = timeline.map(item => `
-        <div class="timeline-item">
-            <div class="timeline-dot"></div>
-            <div class="timeline-content glass-card">
-                <span class="timeline-year gradient-text">${item.year}</span>
-                <h3>${item.title}</h3>
-                <p>${item.desc}</p>
-            </div>
-        </div>
+                    <div class="timeline-item reveal-up">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content glass-card">
+                            <span class="timeline-year">${item.year}</span>
+                            <h4>${item.title}</h4>
+                            <p>${item.desc}</p>
+                        </div>
+                    </div>
     `).join('');
 }
 
+function initIcons() {
+    lucide.createIcons();
+}
+
+function initCursor() {
+    const cursor = document.createElement('div');
+    cursor.className = 'custom-cursor';
+    document.body.appendChild(cursor);
+
+    const cursorBlur = document.createElement('div');
+    cursorBlur.className = 'custom-cursor-blur';
+    document.body.appendChild(cursorBlur);
+
+    document.addEventListener('mousemove', (e) => {
+        gsap.to(cursor, {
+            x: e.clientX,
+            y: e.clientY,
+            duration: 0.1
+        });
+        gsap.to(cursorBlur, {
+            x: e.clientX,
+            y: e.clientY,
+            duration: 0.3
+        });
+    });
+
+    document.querySelectorAll('.magnetic').forEach(btn => {
+        btn.addEventListener('mousemove', (e) => {
+            const rect = btn.getBoundingClientRect();
+            const x = e.clientX - rect.left - rect.width / 2;
+            const y = e.clientY - rect.top - rect.height / 2;
+            
+            gsap.to(btn, {
+                x: x * 0.3,
+                y: y * 0.3,
+                duration: 0.3
+            });
+        });
+
+        btn.addEventListener('mouseleave', () => {
+            gsap.to(btn, {
+                x: 0,
+                y: 0,
+                duration: 0.3
+            });
+        });
+    });
+}
+
 function initAnimations() {
-    gsap.from('.reveal-text', {
-        y: 50,
+    // Reveal up animations
+    gsap.utils.toArray('.reveal-up').forEach(elem => {
+        gsap.from(elem, {
+            scrollTrigger: {
+                trigger: elem,
+                start: 'top 85%',
+                toggleActions: 'play none none none'
+            },
+            y: 50,
+            opacity: 0,
+            duration: 1,
+            ease: 'power3.out'
+        });
+    });
+
+    // Hero content animation
+    gsap.from('.hero-content > *', {
+        y: 30,
         opacity: 0,
         duration: 1,
         stagger: 0.2,
         ease: 'power3.out'
     });
-
-    gsap.utils.toArray('.glass-card, .reveal-up').forEach(card => {
-        gsap.from(card, {
-            scrollTrigger: {
-                trigger: card,
-                start: 'top 90%',
-                toggleActions: 'play none none none'
-            },
-            y: 60,
-            opacity: 0,
-            duration: 1.2,
-            ease: 'power3.out'
-        });
-    });
-}
-
-function initParticles() {
-    const canvas = document.getElementById('bg-canvas');
-    const ctx = canvas.getContext('2d');
-    let particles = [];
-
-    function resize() {
-        canvas.width = window.innerWidth;
-        canvas.height = window.innerHeight;
-    }
-
-    window.addEventListener('resize', resize);
-    resize();
-
-    class Particle {
-        constructor() {
-            this.x = Math.random() * canvas.width;
-            this.y = Math.random() * canvas.height;
-            this.size = Math.random() * 2 + 1;
-            this.speedX = Math.random() * 0.5 - 0.25;
-            this.speedY = Math.random() * 0.5 - 0.25;
-            this.color = Math.random() > 0.5 ? '#00f2ff22' : '#7000ff22';
-        }
-
-        update() {
-            this.x += this.speedX;
-            this.y += this.speedY;
-
-            if (this.x > canvas.width) this.x = 0;
-            if (this.x < 0) this.x = canvas.width;
-            if (this.y > canvas.height) this.y = 0;
-            if (this.y < 0) this.y = canvas.height;
-        }
-
-        draw() {
-            ctx.fillStyle = this.color;
-            ctx.beginPath();
-            ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-            ctx.fill();
-        }
-    }
-
-    for (let i = 0; i < 100; i++) {
-        particles.push(new Particle());
-    }
-
-    function animate() {
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
-        particles.forEach(p => {
-            p.update();
-            p.draw();
-        });
-        requestAnimationFrame(animate);
-    }
-
-    animate();
-}
-
-function initMagneticButtons() {
-    const btns = document.querySelectorAll('.btn');
-    btns.forEach(btn => {
-        btn.addEventListener('mousemove', (e) => {
-            const rect = btn.getBoundingClientRect();
-            const x = e.clientX - rect.left - rect.width / 2;
-            const y = e.clientY - rect.top - rect.height / 2;
-            gsap.to(btn, {
-                x: x * 0.3,
-                y: y * 0.3,
-                duration: 0.3,
-                ease: 'power2.out'
-            });
-        });
-        btn.addEventListener('mouseleave', () => {
-            gsap.to(btn, {
-                x: 0,
-                y: 0,
-                duration: 0.5,
-                ease: 'elastic.out(1, 0.3)'
-            });
-        });
-    });
-}
-
-function initScrollProgress() {
-    window.addEventListener('scroll', () => {
-        const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-        const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-        const scrolled = (winScroll / height) * 100;
-        document.getElementById('scroll-progress').style.width = scrolled + '%';
-    });
 }
 
 function initThemeToggle() {
-    const btn = document.getElementById('theme-toggle');
-    btn.addEventListener('click', () => {
-        document.body.classList.toggle('light-mode');
-        btn.textContent = document.body.classList.contains('light-mode') ? '☀️' : '🌙';
+    // Theme toggle logic (already in HTML for performance)
+}
+
+function initParticles() {
+    // Optional particle system logic
+}
+
+function initMagneticButtons() {
+    // Already in initCursor
+}
+
+function initScrollProgress() {
+    const bar = document.createElement('div');
+    bar.className = 'scroll-progress';
+    document.body.appendChild(bar);
+
+    window.addEventListener('scroll', () => {
+        const h = document.documentElement, 
+              b = document.body,
+              st = 'scrollTop',
+              sh = 'scrollHeight';
+        const percent = (h[st]||b[st]) / ((h[sh]||b[sh]) - h.clientHeight) * 100;
+        bar.style.width = percent + '%';
     });
 }
+
+function hideLoader() {
+    const loader = document.getElementById('loader');
+    if (loader) {
+        gsap.to(loader, {
+            opacity: 0,
+            duration: 0.5,
+            onComplete: () => loader.style.display = 'none'
+        });
+    }
+}
+
+// --- Initialization ---
+const init = () => {
+    hideLoader();
+    try {
+        initIcons();
+        initCursor();
+        renderSkills();
+        renderProjects();
+        renderTimeline();
+        initAnimations();
+        initParticles();
+        initThemeToggle();
+        initMagneticButtons();
+        initScrollProgress();
+        initNavbarScroll();
+    } catch (error) {
+        console.error('Initialization error:', error);
+    }
+};
+
+window.addEventListener('load', init);
