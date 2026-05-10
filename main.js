@@ -45,7 +45,7 @@ const skillCategories = [
 const projects = [
     {
         title: 'Voice Assist Home Automation System With IoT Module',
-        desc: 'An innovative IoT-based home automation system controlled via voice commands.',
+        desc: 'A smart home automation system developed using IoT technology and voice assistant integration to control household devices efficiently. The system allows users to manage lights, fans, doors, and electronic appliances through voice commands and mobile connectivity. Designed with modern automation concepts, real-time monitoring, and secure device communication to improve convenience, energy efficiency, and smart living experiences.',
         tech: ['C++', 'IoT', 'Arduino'],
         image: 'assets/smarthome.png',
         github: '#',
@@ -69,7 +69,7 @@ const projects = [
     },
     {
         title: 'Blood Bank Management System',
-        desc: 'A specialized system for tracking blood inventory and managing donor data with type-safe architecture.',
+        desc: 'A modern Blood Bank Management System designed to streamline donor registration, blood inventory management, blood request processing, and hospital coordination. The system improves efficiency, accuracy, and data security by digitizing blood bank operations with a user-friendly interface and centralized database management. Developed to support fast emergency response and effective healthcare service management.',
         tech: ['TypeScript', 'Node.js', 'PostgreSQL'],
         image: 'assets/qurban.png',
         github: 'https://github.com/MohammedFaizalMohammedAsadhHasan/Blood-Bank',
