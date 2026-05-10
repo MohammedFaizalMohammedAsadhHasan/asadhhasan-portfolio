@@ -4,28 +4,42 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
 
 // --- Data ---
-const skills = [
-    { name: 'HTML', icon: 'html' },
-    { name: 'CSS', icon: 'css' },
-    { name: 'JavaScript', icon: 'js' },
-    { name: 'React', icon: 'react' },
-    { name: 'Java', icon: 'java' },
-    { name: 'Spring Boot', icon: 'spring' },
-    { name: 'MySQL', icon: 'mysql' },
-    { name: 'MongoDB', icon: 'mongodb' },
-    { name: 'Canva', icon: 'canva' },
-    { name: 'CapCut', icon: 'capcut' },
-    { name: 'TypeScript', icon: 'ts' },
-    { name: 'Vite', icon: 'vite' },
-    { name: 'Video Editing', icon: 'video' },
-    { name: 'Poster Design', icon: 'canva' },
-    { name: 'Banner Design', icon: 'canva' },
-    { name: 'GitHub', icon: 'github' },
-    { name: 'Responsive Design', icon: 'html' },
-    { name: 'MS Word', icon: 'word' },
-    { name: 'MS Excel', icon: 'excel' },
-    { name: 'MS PowerPoint', icon: 'pp' },
-    { name: 'MS Access', icon: 'mysql' }
+const skillCategories = [
+    {
+        title: 'Technical Development',
+        skills: [
+            { name: 'HTML', icon: 'html' },
+            { name: 'CSS', icon: 'css' },
+            { name: 'JavaScript', icon: 'js' },
+            { name: 'TypeScript', icon: 'ts' },
+            { name: 'React', icon: 'react' },
+            { name: 'Java', icon: 'java' },
+            { name: 'Spring Boot', icon: 'spring' },
+            { name: 'MySQL', icon: 'mysql' },
+            { name: 'MongoDB', icon: 'mongodb' },
+            { name: 'Vite', icon: 'vite' },
+            { name: 'GitHub', icon: 'github' }
+        ]
+    },
+    {
+        title: 'Special Creative Skills',
+        skills: [
+            { name: 'Canva', icon: 'canva' },
+            { name: 'CapCut', icon: 'capcut' },
+            { name: 'Video Editing', icon: 'video' },
+            { name: 'Poster Design', icon: 'canva' },
+            { name: 'Banner Design', icon: 'canva' }
+        ]
+    },
+    {
+        title: 'Office & Productivity',
+        skills: [
+            { name: 'MS Word', icon: 'word' },
+            { name: 'MS Excel', icon: 'excel' },
+            { name: 'MS PowerPoint', icon: 'pp' },
+            { name: 'MS Access', icon: 'mysql' }
+        ]
+    }
 ];
 
 const projects = [
@@ -169,7 +183,11 @@ function initCursor() {
 
 function renderSkills() {
     const container = document.getElementById('skills-container');
-    container.innerHTML = skills.map(skill => `
+    container.innerHTML = skillCategories.map(cat => `
+        <div class="skill-category">
+            <h3 class="category-title">${cat.title}</h3>
+            <div class="skills-grid">
+                ${cat.skills.map(skill => `
                     <div class="skill-card glass-card">
                         <div class="skill-icon">
                             ${skill.icon === 'canva' ? `
@@ -195,6 +213,9 @@ function renderSkills() {
                         </div>
                         <span>${skill.name}</span>
                     </div>
+                `).join('')}
+            </div>
+        </div>
     `).join('');
 }
 
