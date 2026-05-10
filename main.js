@@ -47,7 +47,7 @@ const projects = [
         title: 'Voice Assist Home Automation System With IoT Module',
         desc: 'An innovative IoT-based home automation system controlled via voice commands.',
         tech: ['C++', 'IoT', 'Arduino'],
-        image: 'assets/smarthome.png',
+        image: 'https://images.unsplash.com/photo-1558002038-1037906d9971?auto=format&fit=crop&q=80&w=800',
         github: '#',
         live: '#'
     },
@@ -71,7 +71,7 @@ const projects = [
         title: 'Blood Bank Management System',
         desc: 'A specialized system for tracking blood inventory and managing donor data with type-safe architecture.',
         tech: ['TypeScript', 'Node.js', 'PostgreSQL'],
-        image: 'https://images.unsplash.com/photo-1615461066841-6116e61058f4?auto=format&fit=crop&q=80&w=800',
+        image: 'https://images.unsplash.com/photo-1579154236594-e179ff303534?auto=format&fit=crop&q=80&w=800',
         github: 'https://github.com/MohammedFaizalMohammedAsadhHasan/Blood-Bank',
         live: '#'
     },
@@ -87,7 +87,7 @@ const projects = [
         title: 'Indoor Plant Disease Detection',
         desc: 'An AI-powered system for detecting diseases in indoor plants through image recognition.',
         tech: ['Python', 'TensorFlow', 'OpenCV'],
-        image: 'https://images.unsplash.com/photo-1530836361283-2eb132e6efb6?auto=format&fit=crop&q=80&w=800',
+        image: 'https://images.unsplash.com/photo-1545239351-ef35f43d514b?auto=format&fit=crop&q=80&w=800',
         github: '#',
         live: '#'
     },
