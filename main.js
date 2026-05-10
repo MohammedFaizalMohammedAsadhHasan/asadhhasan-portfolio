@@ -54,7 +54,7 @@ const projects = [
         title: 'Blood Bank Management System',
         desc: 'A specialized system for tracking blood inventory and managing donor data with type-safe architecture.',
         tech: ['TypeScript', 'Node.js', 'PostgreSQL'],
-        image: 'https://images.unsplash.com/photo-1615461066841-6116e61058f4?auto=format&fit=crop&q=80&w=800',
+        image: 'https://media.licdn.com/dms/image/v2/D4E2DAQHxVYYty4TzDA/profile-treasury-document-images_1280/B4EZmLL0k1KcAU-/1/1758976758076?e=1779321600&v=beta&t=wIJB7VYQ33UiszxmT5FKsiCnPFeVOMvVtwMal9XTmfY',
         github: 'https://github.com/MohammedFaizalMohammedAsadhHasan/Blood-Bank',
         live: '#'
     },
@@ -70,7 +70,7 @@ const projects = [
         title: 'Indoor Plant Disease Detection',
         desc: 'An AI-powered system for detecting diseases in indoor plants through image recognition.',
         tech: ['Python', 'TensorFlow', 'OpenCV'],
-        image: 'https://images.unsplash.com/photo-1530836361283-2eb132e6efb6?auto=format&fit=crop&q=80&w=800',
+        image: 'https://media.licdn.com/dms/image/v2/D4E2DAQFy3H1rqpEHVQ/profile-treasury-document-images_1280/B4EZmLLR7KKsAU-/1/1758976615868?e=1779321600&v=beta&t=LxBttiadohUZ_LkhT76bOqO00jDmGe6wVSnNW26Tlmg',
         github: '#',
         live: '#'
     },
