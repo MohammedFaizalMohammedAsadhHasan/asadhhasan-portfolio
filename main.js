@@ -17,6 +17,9 @@ const skills = [
     { name: 'CapCut', icon: 'capcut' },
     { name: 'TypeScript', icon: 'ts' },
     { name: 'Vite', icon: 'vite' },
+    { name: 'Video Editing', icon: 'video' },
+    { name: 'Poster Design', icon: 'canva' },
+    { name: 'Banner Design', icon: 'canva' },
     { name: 'GitHub', icon: 'github' },
     { name: 'Responsive Design', icon: 'html' },
     { name: 'MS Word', icon: 'word' },
@@ -172,7 +175,7 @@ function renderSkills() {
                             ${skill.icon === 'canva' ? `
                                 <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MCIgaGVpZ2h0PSI0MCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIj48Y2lyY2xlIGN4PSIxMiIgY3k9IjEyIiByPSIxMiIgZmlsbD0iIzAwQzRDQyIvPjx0ZXh0IHg9IjEyIiB5PSIxNSIgZmlsbD0id2hpdGUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSI1IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LXdlaWdodD0iYm9sZCI+Q2FudmE8L3RleHQ+PC9zdmc+" alt="Canva" style="width: 40px; height: 40px;">
                             ` : skill.icon === 'capcut' ? `
-                                <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MCIgaGVpZ2h0PSI0MCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIj48cmVjdCB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHJ4PSI2IiBmaWxsPSIjMDVCNUJCIi8+PHBhdGggZD0iTTEyIDRMMTQuNSA5LjVIMjRMMTYuNSAxNS41TDE5IDI0TDEyIDE4TDUgMjRMNy41IDE1LjVMMCA5LjVIOS41TDEyIDRaIiBmaWxsPSIjMDBGMkZGIi8+PC9zdmc+" alt="CapCut" style="width: 40px; height: 40px;">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/CapCut_logo.svg/1024px-CapCut_logo.svg.png" alt="CapCut" style="width: 40px; height: 40px; object-fit: contain; filter: drop-shadow(0 0 5px rgba(0, 242, 255, 0.5));">
                             ` : skill.icon === 'word' ? `
                                 <svg width="35" height="35" viewBox="0 0 24 24" fill="#2B579A" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6z"/>
