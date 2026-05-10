@@ -47,7 +47,7 @@ const projects = [
         title: 'Voice Assist Home Automation System With IoT Module',
         desc: 'A smart home automation system developed using IoT technology and voice assistant integration to control household devices efficiently. The system allows users to manage lights, fans, doors, and electronic appliances through voice commands and mobile connectivity. Designed with modern automation concepts, real-time monitoring, and secure device communication to improve convenience, energy efficiency, and smart living experiences.',
         tech: ['C++', 'IoT', 'Arduino'],
-        image: 'assets/smarthome.png',
+        image: 'https://images.unsplash.com/photo-1558002038-1037906d9971?auto=format&fit=crop&q=80&w=800',
         github: '#',
         live: '#'
     },
@@ -71,7 +71,7 @@ const projects = [
         title: 'Blood Bank Management System',
         desc: 'A modern Blood Bank Management System designed to streamline donor registration, blood inventory management, blood request processing, and hospital coordination. The system improves efficiency, accuracy, and data security by digitizing blood bank operations with a user-friendly interface and centralized database management. Developed to support fast emergency response and effective healthcare service management.',
         tech: ['TypeScript', 'Node.js', 'PostgreSQL'],
-        image: 'assets/qurban.png',
+        image: 'https://images.unsplash.com/photo-1579154236594-e179ff303534?auto=format&fit=crop&q=80&w=800',
         github: 'https://github.com/MohammedFaizalMohammedAsadhHasan/Blood-Bank',
         live: '#'
     },
