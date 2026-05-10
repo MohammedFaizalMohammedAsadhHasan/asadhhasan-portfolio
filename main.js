@@ -17,6 +17,8 @@ const skills = [
     { name: 'Figma', icon: 'figma' },
     { name: 'Canva', icon: 'canva' },
     { name: 'CapCut', icon: 'capcut' },
+    { name: 'TypeScript', icon: 'ts' },
+    { name: 'Vite', icon: 'vite' },
     { name: 'GitHub', icon: 'github' },
     { name: 'Responsive Design', icon: 'html' },
     { name: 'MS Word', icon: 'word' },
@@ -27,35 +29,35 @@ const skills = [
 
 const projects = [
     {
-        title: 'AL-FARU Megamall Website',
-        desc: 'A premium, modern e-commerce platform for a large luxury retail mall.',
-        tech: ['React', 'Spring Boot', 'MySQL'],
-        image: 'assets/megamall.png',
-        github: '#',
-        live: '#'
-    },
-    {
-        title: 'Event Ticket Booking System',
-        desc: 'Real-time event ticket booking platform with interactive seating maps.',
-        tech: ['Java', 'Spring Boot', 'MongoDB'],
-        image: 'https://images.unsplash.com/photo-1540039155733-5bb30b53aa14?auto=format&fit=crop&q=80&w=800',
-        github: '#',
-        live: '#'
-    },
-    {
-        title: 'Skills Craft Academy System',
-        desc: 'Comprehensive learning management system for skill development and academy management.',
-        tech: ['React', 'Node.js', 'PostgreSQL'],
-        image: 'https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&q=80&w=800',
-        github: '#',
-        live: '#'
-    },
-    {
-        title: 'Kids Toys Online Store',
-        desc: 'An interactive and playful e-commerce experience designed for an online toy store.',
-        tech: ['HTML', 'CSS', 'JS'],
+        title: 'Kid-Toys E-commerce',
+        desc: 'A comprehensive online store for toys with interactive product catalogs, shopping cart, and user profile management.',
+        tech: ['HTML', 'CSS', 'JavaScript'],
         image: 'https://images.unsplash.com/photo-1532330393533-443990a51d10?auto=format&fit=crop&q=80&w=800',
-        github: '#',
+        github: 'https://github.com/MohammedFaizalMohammedAsadhHasan/Kid-Toys',
+        live: '#'
+    },
+    {
+        title: 'Blood-Bank Management',
+        desc: 'A specialized system for tracking blood inventory and managing donor data with type-safe architecture.',
+        tech: ['TypeScript', 'Node.js', 'PostgreSQL'],
+        image: 'https://images.unsplash.com/photo-1615461066841-6116e61058f4?auto=format&fit=crop&q=80&w=800',
+        github: 'https://github.com/MohammedFaizalMohammedAsadhHasan/Blood-Bank',
+        live: '#'
+    },
+    {
+        title: 'Professional Frontend Project',
+        desc: 'A scalable and optimized web application structure using modern build tools for peak performance.',
+        tech: ['Vite', 'JavaScript', 'Tailwind'],
+        image: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=800',
+        github: 'https://github.com/MohammedFaizalMohammedAsadhHasan/frontend',
+        live: '#'
+    },
+    {
+        title: 'SLIIT ITP Enterprise Solution',
+        desc: 'A major university Information Technology Project focusing on solving complex enterprise workflow challenges.',
+        tech: ['MERN Stack', 'Redux', 'Git'],
+        image: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=800',
+        github: 'https://github.com/MohammedFaizalMohammedAsadhHasan/Project-Finalized-',
         live: '#'
     },
     {
@@ -67,18 +69,10 @@ const projects = [
         live: '#'
     },
     {
-        title: 'IT Service Management System',
-        desc: 'Streamlined ticketing and service management for IT teams.',
-        tech: ['Spring Boot', 'React'],
-        image: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=800',
-        github: '#',
-        live: '#'
-    },
-    {
-        title: 'Blood Donor Smart System',
-        desc: 'Digital platform connecting blood donors with hospitals and urgent patient needs.',
-        tech: ['React Native', 'Node.js'],
-        image: 'https://images.unsplash.com/photo-1615461066841-6116e61058f4?auto=format&fit=crop&q=80&w=800',
+        title: 'Smart Home AI Dashboard',
+        desc: 'Futuristic AI-powered dashboard for modern home automation and security.',
+        tech: ['React Native', 'IoT'],
+        image: 'assets/smarthome.png',
         github: '#',
         live: '#'
     }
