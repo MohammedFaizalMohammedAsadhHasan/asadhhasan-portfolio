@@ -13,8 +13,6 @@ const skills = [
     { name: 'Spring Boot', icon: 'spring' },
     { name: 'MySQL', icon: 'mysql' },
     { name: 'MongoDB', icon: 'mongodb' },
-    { name: 'UI/UX Design', icon: 'figma' },
-    { name: 'Figma', icon: 'figma' },
     { name: 'Canva', icon: 'canva' },
     { name: 'CapCut', icon: 'capcut' },
     { name: 'TypeScript', icon: 'ts' },
@@ -29,15 +27,23 @@ const skills = [
 
 const projects = [
     {
+        title: 'Voice Assist Home Automation System With IoT Module',
+        desc: 'My first project: An innovative IoT-based home automation system controlled via voice commands.',
+        tech: ['C++', 'IoT', 'Arduino'],
+        image: 'assets/smarthome.png',
+        github: '#',
+        live: '#'
+    },
+    {
         title: 'Kid-Toys E-commerce',
-        desc: 'A comprehensive online store for toys with interactive product catalogs, shopping cart, and user profile management.',
+        desc: 'A comprehensive online store for toys with interactive product catalogs and shopping cart.',
         tech: ['HTML', 'CSS', 'JavaScript'],
         image: 'https://images.unsplash.com/photo-1532330393533-443990a51d10?auto=format&fit=crop&q=80&w=800',
         github: 'https://github.com/MohammedFaizalMohammedAsadhHasan/Kid-Toys',
         live: '#'
     },
     {
-        title: 'Blood-Bank Management',
+        title: 'Blood Bank Management System',
         desc: 'A specialized system for tracking blood inventory and managing donor data with type-safe architecture.',
         tech: ['TypeScript', 'Node.js', 'PostgreSQL'],
         image: 'https://images.unsplash.com/photo-1615461066841-6116e61058f4?auto=format&fit=crop&q=80&w=800',
@@ -45,41 +51,33 @@ const projects = [
         live: '#'
     },
     {
-        title: 'Professional Frontend Project',
-        desc: 'A scalable and optimized web application structure using modern build tools for peak performance.',
-        tech: ['Vite', 'JavaScript', 'Tailwind'],
-        image: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=800',
-        github: 'https://github.com/MohammedFaizalMohammedAsadhHasan/frontend',
+        title: 'Online Book Management System',
+        desc: 'A digital library platform for managing book collections, lending, and user accounts.',
+        tech: ['Java', 'MySQL', 'Swing'],
+        image: 'https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=crop&q=80&w=800',
+        github: '#',
+        live: '#'
+    },
+    {
+        title: 'Indoor Plant Disease Detection',
+        desc: 'An AI-powered system for detecting diseases in indoor plants through image recognition.',
+        tech: ['Python', 'TensorFlow', 'OpenCV'],
+        image: 'https://images.unsplash.com/photo-1530836361283-2eb132e6efb6?auto=format&fit=crop&q=80&w=800',
+        github: '#',
         live: '#'
     },
     {
         title: 'SLIIT ITP Enterprise Solution',
-        desc: 'A major university Information Technology Project focusing on solving complex enterprise workflow challenges.',
+        desc: 'A major university Information Technology Project focusing on complex enterprise workflows.',
         tech: ['MERN Stack', 'Redux', 'Git'],
         image: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=800',
         github: 'https://github.com/MohammedFaizalMohammedAsadhHasan/Project-Finalized-',
-        live: '#'
-    },
-    {
-        title: 'Qurban Smart System',
-        desc: 'Digital management platform for Qurban activities and distribution tracking.',
-        tech: ['React', 'Firebase'],
-        image: 'assets/qurban.png',
-        github: '#',
-        live: '#'
-    },
-    {
-        title: 'Smart Home AI Dashboard',
-        desc: 'Futuristic AI-powered dashboard for modern home automation and security.',
-        tech: ['React Native', 'IoT'],
-        image: 'assets/smarthome.png',
-        github: '#',
         live: '#'
     }
 ];
 
 const timeline = [
-    { year: '2023 - Present', title: 'SLIIT IT Undergraduate', desc: 'Specializing in software engineering and interactive systems. Maintaining high academic performance.' },
+    { year: '2024', title: 'SLIIT IT Undergraduate', desc: 'Specializing in Information Technology and interactive systems. Maintaining high academic performance.' },
     { year: '2024', title: 'Full Stack Development', desc: 'Mastered React & Spring Boot. Built and deployed multiple complex web systems for local businesses.' },
     { year: '2025', title: 'UI/UX Design Specialization', desc: 'Focused on human-centered design, wireframing, and high-fidelity prototyping using Figma.' },
     { year: '2026', title: 'Advanced Digital Solutions', desc: 'Developing AI-driven platforms and smart management systems for real-world enterprise problems.' }
