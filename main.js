@@ -29,40 +29,80 @@ const skills = [
 
 const projects = [
     {
+        title: 'Voice Assist Home Automation System with IoT Module',
+        desc: 'Smart home system using IoT and voice integration to control appliances through commands.',
+        tech: ['IoT', 'Arduino', 'C++', 'Voice AI'],
+        image: 'https://images.unsplash.com/photo-1558002038-1037906d9971?auto=format&fit=crop&q=80&w=800',
+        github: '#',
+        live: '#'
+    },
+    {
         title: 'AL-FARU Megamall Website',
-        desc: 'A premium, modern e-commerce platform for a large luxury retail mall.',
+        desc: 'Premium e-commerce platform for a luxury retail mall with interactive branding.',
         tech: ['React', 'Spring Boot', 'MySQL'],
         image: 'assets/megamall.png',
         github: '#',
         live: '#'
     },
     {
+        title: 'Blood Bank Management System',
+        desc: 'Digital system for tracking blood inventory and managing donor data with high security.',
+        tech: ['TypeScript', 'Node.js', 'PostgreSQL'],
+        image: 'https://images.unsplash.com/photo-1579154236594-e179ff303534?auto=format&fit=crop&q=80&w=800',
+        github: 'https://github.com/MohammedFaizalMohammedAsadhHasan/Blood-Bank',
+        live: '#'
+    },
+    {
         title: 'Event Ticket Booking System',
-        desc: 'Real-time event ticket booking platform with interactive seating maps.',
+        desc: 'Real-time booking platform with interactive seating maps and automated ticketing.',
         tech: ['Java', 'Spring Boot', 'MongoDB'],
         image: 'https://images.unsplash.com/photo-1540039155733-5bb30b53aa14?auto=format&fit=crop&q=80&w=800',
         github: '#',
         live: '#'
     },
     {
+        title: 'Online Book Management System',
+        desc: 'Centralized digital library for managing collections, lending, and user accounts.',
+        tech: ['Java', 'MySQL', 'Swing'],
+        image: 'https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=crop&q=80&w=800',
+        github: '#',
+        live: '#'
+    },
+    {
+        title: 'Indoor Plant Detect Diecesion',
+        desc: 'AI-powered diagnostic tool for detecting diseases in indoor plants through image recognition.',
+        tech: ['Python', 'TensorFlow', 'OpenCV'],
+        image: 'https://images.unsplash.com/photo-1545239351-ef35f43d514b?auto=format&fit=crop&q=80&w=800',
+        github: '#',
+        live: '#'
+    },
+    {
+        title: 'IT Service Management System',
+        desc: 'Enterprise ticketing and service management system for streamlined IT support.',
+        tech: ['MERN Stack', 'Redux', 'Git'],
+        image: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=800',
+        github: 'https://github.com/MohammedFaizalMohammedAsadhHasan/Project-Finalized-',
+        live: '#'
+    },
+    {
         title: 'Skills Craft Academy System',
-        desc: 'Comprehensive learning management system for skill development and academy management.',
+        desc: 'LMS designed for skill development and academic management for modern institutions.',
         tech: ['React', 'Node.js', 'PostgreSQL'],
         image: 'https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&q=80&w=800',
         github: '#',
         live: '#'
     },
     {
-        title: 'Kids Toys Online Store',
-        desc: 'An interactive and playful e-commerce experience designed for an online toy store.',
-        tech: ['HTML', 'CSS', 'JS'],
+        title: 'Kids Toys Website',
+        desc: 'Interactive and playful e-commerce store with vibrant product showcases.',
+        tech: ['HTML', 'CSS', 'JavaScript'],
         image: 'https://images.unsplash.com/photo-1532330393533-443990a51d10?auto=format&fit=crop&q=80&w=800',
         github: '#',
         live: '#'
     },
     {
         title: 'Qurban Smart System',
-        desc: 'Digital management platform for Qurban activities and distribution tracking.',
+        desc: 'Digital platform for coordinating Qurban activities and distribution tracking.',
         tech: ['React', 'Firebase'],
         image: 'assets/qurban.png',
         github: '#',
