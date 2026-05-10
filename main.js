@@ -28,7 +28,7 @@ const skills = [
 const projects = [
     {
         title: 'Voice Assist Home Automation System With IoT Module',
-        desc: 'My first project: An innovative IoT-based home automation system controlled via voice commands.',
+        desc: 'An innovative IoT-based home automation system controlled via voice commands.',
         tech: ['C++', 'IoT', 'Arduino'],
         image: 'assets/smarthome.png',
         github: '#',
@@ -40,6 +40,14 @@ const projects = [
         tech: ['HTML', 'CSS', 'JavaScript'],
         image: 'https://images.unsplash.com/photo-1532330393533-443990a51d10?auto=format&fit=crop&q=80&w=800',
         github: 'https://github.com/MohammedFaizalMohammedAsadhHasan/Kid-Toys',
+        live: '#'
+    },
+    {
+        title: 'Event Ticket Booking System',
+        desc: 'Real-time event ticket booking platform with interactive seating maps and automated ticketing.',
+        tech: ['Java', 'Spring Boot', 'MongoDB'],
+        image: 'https://images.unsplash.com/photo-1540039155733-5bb30b53aa14?auto=format&fit=crop&q=80&w=800',
+        github: '#',
         live: '#'
     },
     {
@@ -67,8 +75,8 @@ const projects = [
         live: '#'
     },
     {
-        title: 'SLIIT ITP Enterprise Solution',
-        desc: 'A major university Information Technology Project focusing on complex enterprise workflows.',
+        title: 'IT Service Management System',
+        desc: 'A major university project focusing on streamlining ticketing and IT support workflows.',
         tech: ['MERN Stack', 'Redux', 'Git'],
         image: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=800',
         github: 'https://github.com/MohammedFaizalMohammedAsadhHasan/Project-Finalized-',
