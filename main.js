@@ -5,113 +5,87 @@ gsap.registerPlugin(ScrollTrigger);
 
 // --- Data ---
 const skills = [
-    { name: 'HTML', icon: 'html' },
-    { name: 'CSS', icon: 'css' },
-    { name: 'JavaScript', icon: 'js' },
-    { name: 'React', icon: 'react' },
-    { name: 'Java', icon: 'java' },
-    { name: 'Spring Boot', icon: 'spring' },
-    { name: 'MySQL', icon: 'mysql' },
-    { name: 'MongoDB', icon: 'mongodb' },
-    { name: 'Canva', icon: 'canva' },
-    { name: 'CapCut', icon: 'capcut' },
-    { name: 'TypeScript', icon: 'ts' },
-    { name: 'Vite', icon: 'vite' },
-    { name: 'Video Editing', icon: 'video' },
-    { name: 'Poster Design', icon: 'canva' },
-    { name: 'Banner Design', icon: 'canva' },
-    { name: 'GitHub', icon: 'github' },
-    { name: 'MS Word', icon: 'word' },
-    { name: 'MS Excel', icon: 'excel' },
-    { name: 'MS PowerPoint', icon: 'pp' },
-    { name: 'MS Access', icon: 'mysql' }
+    { name: 'HTML', icon: 'logos:html-5', category: 'frontend', desc: 'Expert in semantic markup, accessibility, and modern HTML5 features.' },
+    { name: 'CSS', icon: 'logos:css-3', category: 'frontend', desc: 'Proficient in modern CSS, Flexbox, Grid, animations, and responsive design.' },
+    { name: 'JavaScript', icon: 'logos:javascript', category: 'frontend', desc: 'Strong foundation in ES6+, DOM manipulation, and asynchronous programming.' },
+    { name: 'React', icon: 'logos:react', category: 'frontend', desc: 'Building scalable, interactive UIs with functional components and hooks.' },
+    { name: 'Java', icon: 'logos:java', category: 'backend', desc: 'Experienced in object-oriented programming and enterprise application development.' },
+    { name: 'Spring Boot', icon: 'logos:spring-icon', category: 'backend', desc: 'Developing robust REST APIs and microservices with Spring ecosystem.' },
+    { name: 'MySQL', icon: 'logos:mysql', category: 'backend', desc: 'Database design, complex queries, and relational data modeling.' },
+    { name: 'MongoDB', icon: 'logos:mongodb-icon', category: 'backend', desc: 'Working with NoSQL document databases for flexible data storage.' },
+    { name: 'UI/UX Design', icon: 'logos:figma', category: 'design', desc: 'Creating user-centered, intuitive, and visually appealing digital experiences.' },
+    { name: 'Figma', icon: 'logos:figma', category: 'design', desc: 'Advanced prototyping, wireframing, and design system creation.' },
+    { name: 'Canva', icon: 'simple-icons:canva', color: '#00C4CC', category: 'design', desc: 'Quick graphics creation and social media asset design.' },
+    { name: 'CapCut', icon: 'hugeicons:capcut', category: 'design', desc: 'Video editing, motion graphics, and engaging multimedia content creation.' },
+    { name: 'GitHub', icon: 'logos:github-icon', category: 'tools', desc: 'Version control, collaborative development, and CI/CD pipelines.' },
+    { name: 'Responsive Design', icon: 'flat-color-icons:multiple-devices', category: 'frontend', desc: 'Ensuring seamless experiences across desktop, tablet, and mobile devices.' },
+    { name: 'MS Word', icon: 'vscode-icons:file-type-word', category: 'tools', desc: 'Professional document creation and formatting.' },
+    { name: 'MS Excel', icon: 'vscode-icons:file-type-excel', category: 'tools', desc: 'Data analysis, spreadsheets, and complex formulas.' },
+    { name: 'MS PowerPoint', icon: 'vscode-icons:file-type-powerpoint', category: 'tools', desc: 'Creating impactful presentations and slide decks.' },
+    { name: 'MS Access', icon: 'vscode-icons:file-type-access', category: 'tools', desc: 'Database management and desktop database application creation.' }
 ];
 
 const projects = [
     {
-        title: 'Voice Assist Home Automation System with IoT Module',
-        desc: 'Smart home system using IoT and voice integration to control appliances through commands.',
-        tech: ['IoT', 'Arduino', 'C++', 'Voice AI'],
-        image: 'https://images.unsplash.com/photo-1558002038-1037906d9971?auto=format&fit=crop&q=80&w=800',
-        github: '#',
-        live: '#'
-    },
-    {
         title: 'AL-FARU Megamall Website',
-        desc: 'Premium e-commerce platform for a luxury retail mall with interactive branding.',
+        desc: 'A premium, modern e-commerce platform for a large luxury retail mall.',
         tech: ['React', 'Spring Boot', 'MySQL'],
         image: 'assets/megamall.png',
         github: '#',
         live: '#'
     },
     {
-        title: 'Blood Bank Management System',
-        desc: 'Digital system for tracking blood inventory and managing donor data with high security.',
-        tech: ['TypeScript', 'Node.js', 'PostgreSQL'],
-        image: 'https://images.unsplash.com/photo-1579154236594-e179ff303534?auto=format&fit=crop&q=80&w=800',
-        github: 'https://github.com/MohammedFaizalMohammedAsadhHasan/Blood-Bank',
-        live: '#'
-    },
-    {
         title: 'Event Ticket Booking System',
-        desc: 'Real-time booking platform with interactive seating maps and automated ticketing.',
+        desc: 'Real-time event ticket booking platform with interactive seating maps.',
         tech: ['Java', 'Spring Boot', 'MongoDB'],
         image: 'https://images.unsplash.com/photo-1540039155733-5bb30b53aa14?auto=format&fit=crop&q=80&w=800',
         github: '#',
         live: '#'
     },
     {
-        title: 'Online Book Management System',
-        desc: 'Centralized digital library for managing collections, lending, and user accounts.',
-        tech: ['Java', 'MySQL', 'Swing'],
-        image: 'https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=crop&q=80&w=800',
-        github: '#',
-        live: '#'
-    },
-    {
-        title: 'Indoor Plant Detect Diecesion',
-        desc: 'AI-powered diagnostic tool for detecting diseases in indoor plants through image recognition.',
-        tech: ['Python', 'TensorFlow', 'OpenCV'],
-        image: 'https://images.unsplash.com/photo-1545239351-ef35f43d514b?auto=format&fit=crop&q=80&w=800',
-        github: '#',
-        live: '#'
-    },
-    {
-        title: 'IT Service Management System',
-        desc: 'Enterprise ticketing and service management system for streamlined IT support.',
-        tech: ['MERN Stack', 'Redux', 'Git'],
-        image: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=800',
-        github: 'https://github.com/MohammedFaizalMohammedAsadhHasan/Project-Finalized-',
-        live: '#'
-    },
-    {
         title: 'Skills Craft Academy System',
-        desc: 'LMS designed for skill development and academic management for modern institutions.',
+        desc: 'Comprehensive learning management system for skill development and academy management.',
         tech: ['React', 'Node.js', 'PostgreSQL'],
         image: 'https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&q=80&w=800',
         github: '#',
         live: '#'
     },
     {
-        title: 'Kids Toys Website',
-        desc: 'Interactive and playful e-commerce store with vibrant product showcases.',
-        tech: ['HTML', 'CSS', 'JavaScript'],
+        title: 'Kids Toys Online Store',
+        desc: 'An interactive and playful e-commerce experience designed for an online toy store.',
+        tech: ['HTML', 'CSS', 'JS'],
         image: 'https://images.unsplash.com/photo-1532330393533-443990a51d10?auto=format&fit=crop&q=80&w=800',
         github: '#',
         live: '#'
     },
     {
         title: 'Qurban Smart System',
-        desc: 'Digital platform for coordinating Qurban activities and distribution tracking.',
+        desc: 'Digital management platform for Qurban activities and distribution tracking.',
         tech: ['React', 'Firebase'],
         image: 'assets/qurban.png',
+        github: '#',
+        live: '#'
+    },
+    {
+        title: 'IT Service Management System',
+        desc: 'Streamlined ticketing and service management for IT teams.',
+        tech: ['Spring Boot', 'React'],
+        image: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=800',
+        github: '#',
+        live: '#'
+    },
+    {
+        title: 'Blood Donor Smart System',
+        desc: 'Digital platform connecting blood donors with hospitals and urgent patient needs.',
+        tech: ['React Native', 'Node.js'],
+        image: 'https://images.unsplash.com/photo-1615461066841-6116e61058f4?auto=format&fit=crop&q=80&w=800',
         github: '#',
         live: '#'
     }
 ];
 
 const timeline = [
-    { year: '2024', title: 'SLIIT IT Undergraduate', desc: 'Specializing in Information Technology and interactive systems. Maintaining high academic performance.' },
+    { year: '2023 - Present', title: 'SLIIT IT Undergraduate', desc: 'Specializing in software engineering and interactive systems. Maintaining high academic performance.' },
     { year: '2024', title: 'Full Stack Development', desc: 'Mastered React & Spring Boot. Built and deployed multiple complex web systems for local businesses.' },
     { year: '2025', title: 'UI/UX Design Specialization', desc: 'Focused on human-centered design, wireframing, and high-fidelity prototyping using Figma.' },
     { year: '2026', title: 'Advanced Digital Solutions', desc: 'Developing AI-driven platforms and smart management systems for real-world enterprise problems.' }
@@ -128,210 +102,448 @@ function initNavbarScroll() {
     });
 }
 
-function renderSkills() {
-    const container = document.getElementById('skills-container');
-    container.innerHTML = skills.map(skill => `
-                    <div class="skill-card glass-card">
-                        <div class="skill-icon">
-                            ${skill.icon === 'canva' ? `
-                                <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MCIgaGVpZ2h0PSI0MCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIj48Y2lyY2xlIGN4PSIxMiIgY3k9IjEyIiByPSIxMiIgZmlsbD0iIzAwQzRDQyIvPjx0ZXh0IHg9IjEyIiB5PSIxNSIgZmlsbD0id2hpdGUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSI1IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LXdlaWdodD0iYm9sZCI+Q2FudmE8L3RleHQ+PC9zdmc+" alt="Canva" style="width: 40px; height: 40px;">
-                            ` : skill.icon === 'capcut' ? `
-                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/CapCut_logo.svg/1024px-CapCut_logo.svg.png" alt="CapCut" style="width: 40px; height: 40px; object-fit: contain; filter: drop-shadow(0 0 5px rgba(0, 242, 255, 0.5));">
-                            ` : skill.icon === 'word' ? `
-                                <svg width="35" height="35" viewBox="0 0 24 24" fill="#2B579A" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6z"/>
-                                    <text x="7" y="16" fill="white" font-family="Arial" font-size="10" font-weight="bold">W</text>
-                                </svg>
-                            ` : skill.icon === 'excel' ? `
-                                <svg width="35" height="35" viewBox="0 0 24 24" fill="#217346" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6z"/>
-                                    <text x="7" y="16" fill="white" font-family="Arial" font-size="10" font-weight="bold">X</text>
-                                </svg>
-                            ` : skill.icon === 'pp' ? `
-                                <svg width="35" height="35" viewBox="0 0 24 24" fill="#D24726" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6z"/>
-                                    <text x="7" y="16" fill="white" font-family="Arial" font-size="10" font-weight="bold">P</text>
-                                </svg>
-                            ` : `<img src="https://skillicons.dev/icons?i=${skill.icon}" alt="${skill.name}" style="width: 40px; height: 40px;">`}
-                        </div>
-                        <span>${skill.name}</span>
-                    </div>
-    `).join('');
-}
-
-function renderProjects() {
-    const container = document.getElementById('projects-container');
-    container.innerHTML = projects.map(project => `
-                    <div class="project-card glass-card reveal-up">
-                        <div class="project-image">
-                            <img src="${project.image}" alt="${project.title}">
-                            <div class="project-overlay">
-                                <div class="project-links">
-                                    <a href="${project.github}" class="project-link magnetic" title="GitHub">
-                                        <i data-lucide="github"></i>
-                                    </a>
-                                    <a href="${project.live}" class="project-link magnetic" title="Live Demo">
-                                        <i data-lucide="external-link"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="project-content">
-                            <h3>${project.title}</h3>
-                            <p>${project.desc}</p>
-                            <div class="project-tech">
-                                ${project.tech.map(t => `<span class="tech-tag">${t}</span>`).join('')}
-                            </div>
-                        </div>
-                    </div>
-    `).join('');
-}
-
-function renderTimeline() {
-    const container = document.getElementById('timeline-container');
-    container.innerHTML = timeline.map(item => `
-                    <div class="timeline-item reveal-up">
-                        <div class="timeline-dot"></div>
-                        <div class="timeline-content glass-card">
-                            <span class="timeline-year">${item.year}</span>
-                            <h4>${item.title}</h4>
-                            <p>${item.desc}</p>
-                        </div>
-                    </div>
-    `).join('');
-}
-
-function initIcons() {
-    lucide.createIcons();
-}
-
-function initCursor() {
-    const cursor = document.createElement('div');
-    cursor.className = 'custom-cursor';
-    document.body.appendChild(cursor);
-
-    const cursorBlur = document.createElement('div');
-    cursorBlur.className = 'custom-cursor-blur';
-    document.body.appendChild(cursorBlur);
-
-    document.addEventListener('mousemove', (e) => {
-        gsap.to(cursor, {
-            x: e.clientX,
-            y: e.clientY,
-            duration: 0.1
-        });
-        gsap.to(cursorBlur, {
-            x: e.clientX,
-            y: e.clientY,
-            duration: 0.3
-        });
-    });
-
-    document.querySelectorAll('.magnetic').forEach(btn => {
-        btn.addEventListener('mousemove', (e) => {
-            const rect = btn.getBoundingClientRect();
-            const x = e.clientX - rect.left - rect.width / 2;
-            const y = e.clientY - rect.top - rect.height / 2;
-            
-            gsap.to(btn, {
-                x: x * 0.3,
-                y: y * 0.3,
-                duration: 0.3
-            });
-        });
-
-        btn.addEventListener('mouseleave', () => {
-            gsap.to(btn, {
-                x: 0,
-                y: 0,
-                duration: 0.3
-            });
-        });
-    });
-}
-
-function initAnimations() {
-    // Reveal up animations
-    gsap.utils.toArray('.reveal-up').forEach(elem => {
-        gsap.from(elem, {
-            scrollTrigger: {
-                trigger: elem,
-                start: 'top 85%',
-                toggleActions: 'play none none none'
-            },
-            y: 50,
-            opacity: 0,
-            duration: 1,
-            ease: 'power3.out'
-        });
-    });
-
-    // Hero content animation
-    gsap.from('.hero-content > *', {
-        y: 30,
-        opacity: 0,
-        duration: 1,
-        stagger: 0.2,
-        ease: 'power3.out'
-    });
-}
-
-function initThemeToggle() {
-    // Theme toggle logic (already in HTML for performance)
-}
-
-function initParticles() {
-    // Optional particle system logic
-}
-
-function initMagneticButtons() {
-    // Already in initCursor
-}
-
-function initScrollProgress() {
-    const bar = document.createElement('div');
-    bar.className = 'scroll-progress';
-    document.body.appendChild(bar);
-
-    window.addEventListener('scroll', () => {
-        const h = document.documentElement, 
-              b = document.body,
-              st = 'scrollTop',
-              sh = 'scrollHeight';
-        const percent = (h[st]||b[st]) / ((h[sh]||b[sh]) - h.clientHeight) * 100;
-        bar.style.width = percent + '%';
-    });
-}
-
-function hideLoader() {
-    const loader = document.getElementById('loader');
-    if (loader) {
-        gsap.to(loader, {
-            opacity: 0,
-            duration: 0.5,
-            onComplete: () => loader.style.display = 'none'
-        });
-    }
-}
-
 // --- Initialization ---
 const init = () => {
-    hideLoader();
+    // hideLoader(); // Removed as new loading screen handles this
     try {
         initIcons();
         initCursor();
         renderSkills();
         renderProjects();
         renderTimeline();
-        initAnimations();
+        initScrollAnimations();
         initParticles();
         initThemeToggle();
         initMagneticButtons();
         initScrollProgress();
         initNavbarScroll();
-    } catch (error) {
-        console.error('Initialization error:', error);
+        initMobileMenu();
+        initSkillFilters();
+        initContactForm();
+        initCVDownload();
+        initSkillsModal();
+    } catch (err) {
+        console.error('Initialization error:', err);
     }
 };
 
-window.addEventListener('load', init);
+if (document.readyState === 'complete' || document.readyState === 'interactive') {
+    init();
+} else {
+    window.addEventListener('DOMContentLoaded', init);
+}
+
+function hideLoader() {
+    const loader = document.getElementById('loader');
+    if (loader) {
+        setTimeout(() => {
+            loader.classList.add('loader-hidden');
+        }, 500);
+    }
+}
+
+function initIcons() {
+    lucide.createIcons({
+        icons: lucide.icons
+    });
+}
+
+function initCursor() {
+    const cursor = document.querySelector('.custom-cursor');
+    const follower = document.querySelector('.cursor-follower');
+    
+    if (!cursor || !follower) return;
+
+    document.addEventListener('mousemove', (e) => {
+        gsap.to(cursor, { x: e.clientX, y: e.clientY, duration: 0 });
+        gsap.to(follower, { x: e.clientX, y: e.clientY, duration: 0.15 });
+    });
+
+    document.querySelectorAll('a, button, .skill-tag, .project-card, .magnetic, .filter-btn').forEach(el => {
+        el.addEventListener('mouseenter', () => {
+            follower.classList.add('cursor-grow');
+            cursor.style.transform = 'scale(1.5)';
+        });
+        el.addEventListener('mouseleave', () => {
+            follower.classList.remove('cursor-grow');
+            cursor.style.transform = 'scale(1)';
+        });
+    });
+}
+
+function renderSkills(filter = 'all') {
+    const container = document.getElementById('skills-container');
+    const filteredSkills = filter === 'all' ? skills : skills.filter(s => s.category === filter);
+    
+    container.innerHTML = filteredSkills.map((skill, index) => `
+                    <div class="skill-tag glass-card reveal-up cursor-pointer hover:scale-105" data-skill-index="${index}">
+                        <iconify-icon icon="${skill.icon}" width="24" height="24" ${skill.color ? `style="color: ${skill.color}"` : ''}></iconify-icon>
+                        <span>${skill.name}</span>
+                    </div>
+    `).join('');
+
+    // Attach modal events
+    document.querySelectorAll('.skill-tag').forEach(tag => {
+        tag.addEventListener('click', () => {
+            const skillIndex = tag.getAttribute('data-skill-index');
+            const skill = filteredSkills[skillIndex];
+            openSkillModal(skill);
+        });
+    });
+
+    initScrollAnimations(); // Re-init scroll animations for new cards
+}
+
+function initSkillFilters() {
+    const btns = document.querySelectorAll('.filter-btn');
+    btns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            btns.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            renderSkills(btn.dataset.filter);
+        });
+    });
+}
+
+function renderProjects() {
+    const container = document.getElementById('projects-container');
+    container.innerHTML = projects.map(proj => `
+        <div class="project-card glass-card">
+            <div class="project-img">
+                <img src="${proj.image}" alt="${proj.title}">
+                <div class="project-overlay">
+                    <div class="project-links">
+                        <a href="${proj.github}" target="_blank" class="btn-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+                        </a>
+                        <a href="${proj.live}" target="_blank" class="btn-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="project-info">
+                <h3>${proj.title}</h3>
+                <p>${proj.desc}</p>
+                <div class="project-tech">
+                    ${proj.tech.map(t => `<span class="tech-tag">${t}</span>`).join('')}
+                </div>
+            </div>
+        </div>
+    `).join('');
+    lucide.createIcons({
+        icons: lucide.icons
+    });
+}
+
+function renderTimeline() {
+    const container = document.getElementById('timeline-container');
+    container.innerHTML = timeline.map(item => `
+        <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content glass-card">
+                <span class="timeline-year gradient-text">${item.year}</span>
+                <h3>${item.title}</h3>
+                <p>${item.desc}</p>
+            </div>
+        </div>
+    `).join('');
+}
+
+function initHeroAnimations() {
+    // Split text animation for hero name
+    const heroTitle = document.querySelector('.hero h1');
+    if (heroTitle && !heroTitle.querySelector('.line-mask')) {
+        heroTitle.innerHTML = heroTitle.innerHTML.split('<br>').map(line => 
+            `<div class="line-mask"><div class="line-content">${line}</div></div>`
+        ).join('');
+    }
+
+    const tl = gsap.timeline();
+
+    tl.from('.line-content', {
+        y: 100,
+        opacity: 0,
+        duration: 1.5,
+        stagger: 0.2,
+        ease: 'power4.out',
+        delay: 0.2
+    })
+    .from('.reveal-text:not(.name)', {
+        y: 30,
+        opacity: 0,
+        duration: 1,
+        stagger: 0.1,
+        ease: 'power3.out'
+    }, '-=0.8')
+    .from('.hero-btns .btn', {
+        scale: 0.8,
+        opacity: 0,
+        duration: 0.8,
+        stagger: 0.1,
+        ease: 'back.out(1.7)'
+    }, '-=0.5')
+    .from('.scroll-indicator', {
+        opacity: 0,
+        y: -20,
+        duration: 1,
+        ease: 'power2.out'
+    }, '-=0.2');
+}
+
+function initScrollAnimations() {
+    gsap.utils.toArray('.glass-card, .reveal-up').forEach(card => {
+        gsap.from(card, {
+            scrollTrigger: {
+                trigger: card,
+                start: 'top 90%',
+                toggleActions: 'play none none none'
+            },
+            y: 60,
+            opacity: 0,
+            duration: 1.2,
+            ease: 'power3.out'
+        });
+    });
+}
+
+function initParticles() {
+    const canvas = document.getElementById('bg-canvas');
+    const ctx = canvas.getContext('2d');
+    let particles = [];
+
+    function resize() {
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+    }
+
+    window.addEventListener('resize', resize);
+    resize();
+
+    class Particle {
+        constructor() {
+            this.x = Math.random() * canvas.width;
+            this.y = Math.random() * canvas.height;
+            this.size = Math.random() * 2 + 1;
+            this.speedX = Math.random() * 0.5 - 0.25;
+            this.speedY = Math.random() * 0.5 - 0.25;
+            this.color = Math.random() > 0.5 ? '#00f2ff22' : '#7000ff22';
+        }
+
+        update() {
+            this.x += this.speedX;
+            this.y += this.speedY;
+
+            if (this.x > canvas.width) this.x = 0;
+            if (this.x < 0) this.x = canvas.width;
+            if (this.y > canvas.height) this.y = 0;
+            if (this.y < 0) this.y = canvas.height;
+        }
+
+        draw() {
+            ctx.fillStyle = this.color;
+            ctx.beginPath();
+            ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+            ctx.fill();
+        }
+    }
+
+    for (let i = 0; i < 100; i++) {
+        particles.push(new Particle());
+    }
+
+    function animate() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        particles.forEach(p => {
+            p.update();
+            p.draw();
+        });
+        requestAnimationFrame(animate);
+    }
+
+    animate();
+}
+
+function initMagneticButtons() {
+    const btns = document.querySelectorAll('.btn');
+    btns.forEach(btn => {
+        btn.addEventListener('mousemove', (e) => {
+            const rect = btn.getBoundingClientRect();
+            const x = e.clientX - rect.left - rect.width / 2;
+            const y = e.clientY - rect.top - rect.height / 2;
+            gsap.to(btn, {
+                x: x * 0.3,
+                y: y * 0.3,
+                duration: 0.3,
+                ease: 'power2.out'
+            });
+        });
+        btn.addEventListener('mouseleave', () => {
+            gsap.to(btn, {
+                x: 0,
+                y: 0,
+                duration: 0.5,
+                ease: 'elastic.out(1, 0.3)'
+            });
+        });
+    });
+}
+
+function initScrollProgress() {
+    window.addEventListener('scroll', () => {
+        const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+        const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        const scrolled = (winScroll / height) * 100;
+        document.getElementById('scroll-progress').style.width = scrolled + '%';
+    });
+}
+
+function initThemeToggle() {
+    const toggle = document.getElementById('theme-toggle');
+    const sunIcon = document.getElementById('theme-icon-sun');
+    const moonIcon = document.getElementById('theme-icon-moon');
+
+    const updateIcons = (theme) => {
+        if (theme === 'dark') {
+            sunIcon.style.display = 'block';
+            moonIcon.style.display = 'none';
+        } else {
+            sunIcon.style.display = 'none';
+            moonIcon.style.display = 'block';
+        }
+    };
+
+    toggle.addEventListener('click', () => {
+        const currentTheme = document.documentElement.getAttribute('data-theme') || 'dark';
+        const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+        document.documentElement.setAttribute('data-theme', newTheme);
+        localStorage.setItem('theme', newTheme);
+        updateIcons(newTheme);
+    });
+
+    const savedTheme = localStorage.getItem('theme') || 'dark';
+    document.documentElement.setAttribute('data-theme', savedTheme);
+    updateIcons(savedTheme);
+}
+
+// Skills Modal Logic
+function openSkillModal(skill) {
+    const modal = document.getElementById('skills-modal');
+    const content = document.getElementById('skills-modal-content');
+    const iconContainer = document.getElementById('modal-icon-container');
+    const name = document.getElementById('modal-skill-name');
+    const category = document.getElementById('modal-skill-category');
+    const desc = document.getElementById('modal-skill-desc');
+
+    iconContainer.innerHTML = `<iconify-icon icon="${skill.icon}" width="48" height="48" ${skill.color ? `style="color: ${skill.color}"` : ''}></iconify-icon>`;
+    name.textContent = skill.name;
+    category.textContent = skill.category;
+    desc.textContent = skill.desc || `Proficient in ${skill.name} with hands-on experience in building modern applications.`;
+
+    modal.classList.remove('opacity-0', 'pointer-events-none');
+    content.classList.remove('scale-95');
+    content.classList.add('scale-100');
+}
+
+function initSkillsModal() {
+    const modal = document.getElementById('skills-modal');
+    const content = document.getElementById('skills-modal-content');
+    const closeBtn = document.getElementById('skills-modal-close');
+    const overlay = modal.querySelector('.modal-overlay');
+
+    const closeModal = () => {
+        modal.classList.add('opacity-0', 'pointer-events-none');
+        content.classList.remove('scale-100');
+        content.classList.add('scale-95');
+    };
+
+    closeBtn.addEventListener('click', closeModal);
+    overlay.addEventListener('click', closeModal);
+}
+
+function initContactForm() {
+    const form = document.getElementById('contact-form');
+    if (!form) return;
+
+    form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const btn = form.querySelector('button[type="submit"]');
+        const originalText = btn.innerHTML;
+        const successMsg = document.getElementById('contact-success');
+        
+        btn.innerHTML = '<i data-lucide="loader" class="spin w-4 h-4"></i> Sending...';
+        lucide.createIcons();
+
+        // Simulate API call
+        setTimeout(() => {
+            btn.innerHTML = originalText;
+            lucide.createIcons();
+            form.reset();
+            successMsg.classList.remove('hidden');
+            successMsg.classList.add('flex');
+            
+            setTimeout(() => {
+                successMsg.classList.add('hidden');
+                successMsg.classList.remove('flex');
+            }, 3000);
+        }, 1500);
+    });
+}
+
+// Loading Screen
+const loader = document.getElementById('loader');
+const loaderText = document.querySelector('.loader-text');
+let count = 0;
+const interval = setInterval(() => {
+    count += Math.floor(Math.random() * 10) + 1;
+    if (count >= 100) {
+        count = 100;
+        clearInterval(interval);
+        setTimeout(() => {
+            loader.style.opacity = '0';
+            setTimeout(() => {
+                loader.style.display = 'none';
+                initHeroAnimations();
+            }, 800);
+        }, 500);
+    }
+    loaderText.textContent = count + '%';
+}, 50);
+
+function initMobileMenu() {
+    const toggle = document.querySelector('.mobile-toggle');
+    const menu = document.getElementById('mobile-menu');
+    const links = document.querySelectorAll('.mobile-nav-links a');
+
+    if (toggle && menu) {
+        toggle.addEventListener('click', () => {
+            menu.classList.toggle('active');
+            document.body.classList.toggle('no-scroll');
+        });
+
+        links.forEach(link => {
+            link.addEventListener('click', () => {
+                menu.classList.remove('active');
+                document.body.classList.remove('no-scroll');
+            });
+        });
+    }
+}
+
+function initCVDownload() {
+    const downloadBtn = document.querySelector('a[download]');
+    if (downloadBtn) {
+        downloadBtn.addEventListener('click', (e) => {
+            console.log('CV Download started...');
+            const originalText = downloadBtn.innerHTML;
+            downloadBtn.innerHTML = '<i data-lucide="check"></i> Downloading...';
+            if (window.lucide) lucide.createIcons();
+            
+            setTimeout(() => {
+                downloadBtn.innerHTML = originalText;
+                if (window.lucide) lucide.createIcons();
+            }, 3000);
+        });
+    }
+}
+
