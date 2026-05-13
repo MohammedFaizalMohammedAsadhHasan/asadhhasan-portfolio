@@ -399,27 +399,31 @@ function initScrollProgress() {
 }
 
 function initThemeToggle() {
-    const toggle = document.getElementById('theme-toggle');
-    const sunIcon = document.getElementById('theme-icon-sun');
-    const moonIcon = document.getElementById('theme-icon-moon');
+    const sunBtn = document.getElementById('theme-toggle-sun');
+    const moonBtn = document.getElementById('theme-toggle-moon');
+
+    if (!sunBtn || !moonBtn) return;
 
     const updateIcons = (theme) => {
         if (theme === 'dark') {
-            sunIcon.style.display = 'block';
-            moonIcon.style.display = 'none';
+            sunBtn.style.display = 'flex';
+            moonBtn.style.display = 'none';
         } else {
-            sunIcon.style.display = 'none';
-            moonIcon.style.display = 'block';
+            sunBtn.style.display = 'none';
+            moonBtn.style.display = 'flex';
         }
     };
 
-    toggle.addEventListener('click', () => {
+    const handleToggle = () => {
         const currentTheme = document.documentElement.getAttribute('data-theme') || 'dark';
         const newTheme = currentTheme === 'light' ? 'dark' : 'light';
         document.documentElement.setAttribute('data-theme', newTheme);
         localStorage.setItem('theme', newTheme);
         updateIcons(newTheme);
-    });
+    };
+
+    sunBtn.addEventListener('click', handleToggle);
+    moonBtn.addEventListener('click', handleToggle);
 
     const savedTheme = localStorage.getItem('theme') || 'dark';
     document.documentElement.setAttribute('data-theme', savedTheme);
