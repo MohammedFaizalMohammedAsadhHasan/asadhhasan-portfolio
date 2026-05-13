@@ -288,6 +288,15 @@ body {
   background-clip: text;
 }
 
+.neon-text {
+  color: var(--neon-blue);
+  text-shadow: 0 0 15px rgba(0, 242, 255, 0.6);
+}
+
+.font-display {
+  font-family: 'Outfit', sans-serif;
+}
+
 h1, h2, h3 {
   font-weight: 700;
   letter-spacing: -0.02em;
