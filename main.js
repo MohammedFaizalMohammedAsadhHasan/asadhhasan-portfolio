@@ -20,11 +20,11 @@ const skills = [
     { name: 'CapCut', icon: 'devicon:capcut', category: 'design', desc: 'Video editing, motion graphics, and engaging multimedia content creation.' },
     { name: 'GitHub', icon: 'logos:github-icon', category: 'tools', desc: 'Version control, collaborative development, and CI/CD pipelines.' },
     { name: 'Ubunthu', icon: 'logos:ubuntu', category: 'tools', desc: 'Version control, collaborative development, and CI/CD pipelines.' },
-    { name: 'Notepad', icon: 'flat-color-icons:multiple-devices', category: 'tools', desc: 'Ensuring seamless experiences across desktop, tablet, and mobile devices.' },
+    { name: 'Notepad', icon: 'flat-color-icons:notebook', category: 'tools', desc: 'Ensuring seamless experiences across desktop, tablet, and mobile devices.' },
     { name: 'Notepad++', icon: 'logos:notepad-plus-plus', category: 'tools', desc: 'Professional document creation and formatting.' },
     { name: 'IntelliJ IDEA', icon: 'logos:intellij-idea', category: 'tools', desc: 'Professional document creation and formatting.' },
     { name: 'VS Code', icon: 'vscode-icons:file-type-word', category: 'tools', desc: 'Professional document creation and formatting.' },
-    { name: 'Windsurf', icon: 'logos:windsurf-', category: 'tools', desc: 'Professional document creation and formatting.' },
+    { name: 'Windsurf IDE', icon: 'logos:windsurf-', category: 'tools', desc: 'Professional document creation and formatting.' },
     { name: 'MS Word', icon: 'vscode-icons:file-type-word', category: 'tools', desc: 'Professional document creation and formatting.' },
     { name: 'MS Excel', icon: 'vscode-icons:file-type-excel', category: 'tools', desc: 'Data analysis, spreadsheets, and complex formulas.' },
     { name: 'MS PowerPoint', icon: 'vscode-icons:file-type-powerpoint', category: 'tools', desc: 'Creating impactful presentations and slide decks.' },
@@ -206,12 +206,15 @@ function renderSkills(filter = 'all') {
 
 function initSkillFilters() {
     const btns = document.querySelectorAll('.filter-btn');
+    if (btns.length === 0) return;
+
     btns.forEach(btn => {
-        btn.addEventListener('click', () => {
+        btn.onclick = (e) => {
             btns.forEach(b => b.classList.remove('active'));
             btn.classList.add('active');
-            renderSkills(btn.dataset.filter);
-        });
+            const filterValue = btn.getAttribute('data-filter') || 'all';
+            renderSkills(filterValue);
+        };
     });
 }
 
