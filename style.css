@@ -493,6 +493,12 @@ nav {
   gap: 20px;
 }
 
+.hero-cv-link {
+  display: flex;
+  justify-content: center;
+  margin-top: 16px;
+}
+
 /* Buttons */
 .btn {
   padding: 12px 30px;
