@@ -10,15 +10,21 @@ const skills = [
     { name: 'JavaScript', icon: 'logos:javascript', category: 'frontend', desc: 'Strong foundation in ES6+, DOM manipulation, and asynchronous programming.' },
     { name: 'React', icon: 'logos:react', category: 'frontend', desc: 'Building scalable, interactive UIs with functional components and hooks.' },
     { name: 'Java', icon: 'logos:java', category: 'backend', desc: 'Experienced in object-oriented programming and enterprise application development.' },
+    { name: 'Python', icon: 'logos:python', category: 'backend', desc: 'Experienced in object-oriented programming and enterprise application development.' },
+    { name: 'C', icon: 'logos:c', category: 'backend', desc: 'Experienced in object-oriented programming and enterprise application development.' },
     { name: 'Spring Boot', icon: 'logos:spring-icon', category: 'backend', desc: 'Developing robust REST APIs and microservices with Spring ecosystem.' },
     { name: 'MySQL', icon: 'logos:mysql', category: 'backend', desc: 'Database design, complex queries, and relational data modeling.' },
     { name: 'MongoDB', icon: 'logos:mongodb-icon', category: 'backend', desc: 'Working with NoSQL document databases for flexible data storage.' },
-    { name: 'UI/UX Design', icon: 'logos:figma', category: 'design', desc: 'Creating user-centered, intuitive, and visually appealing digital experiences.' },
     { name: 'Figma', icon: 'logos:figma', category: 'design', desc: 'Advanced prototyping, wireframing, and design system creation.' },
-    { name: 'Canva', icon: 'simple-icons:canva', color: '#00C4CC', category: 'design', desc: 'Quick graphics creation and social media asset design.' },
-    { name: 'CapCut', icon: 'hugeicons:capcut', category: 'design', desc: 'Video editing, motion graphics, and engaging multimedia content creation.' },
+    { name: 'Canva', icon: 'logos:canva', color: '#00C4CC', category: 'design', desc: 'Quick graphics creation and social media asset design.' },
+    { name: 'CapCut', icon: 'logos:capcut', category: 'design', desc: 'Video editing, motion graphics, and engaging multimedia content creation.' },
     { name: 'GitHub', icon: 'logos:github-icon', category: 'tools', desc: 'Version control, collaborative development, and CI/CD pipelines.' },
-    { name: 'Responsive Design', icon: 'flat-color-icons:multiple-devices', category: 'frontend', desc: 'Ensuring seamless experiences across desktop, tablet, and mobile devices.' },
+    { name: 'Ubunthu', icon: 'logos:ubuntu', category: 'tools', desc: 'Version control, collaborative development, and CI/CD pipelines.' },
+    { name: 'Notepad', icon: 'flat-color-icons:multiple-devices', category: 'frontend', desc: 'Ensuring seamless experiences across desktop, tablet, and mobile devices.' },
+    { name: 'Notepad++', icon: 'logos:notepad-plus-plus', category: 'tools', desc: 'Professional document creation and formatting.' },
+    { name: 'IntelliJ IDEA', icon: 'logos:intellij-idea', category: 'tools', desc: 'Professional document creation and formatting.' },
+    { name: 'VS Code', icon: 'vscode-icons:file-type-word', category: 'tools', desc: 'Professional document creation and formatting.' },
+    { name: 'Windsurf', icon: 'logos:windsurf-', category: 'frontend', desc: 'Professional document creation and formatting.' },
     { name: 'MS Word', icon: 'vscode-icons:file-type-word', category: 'tools', desc: 'Professional document creation and formatting.' },
     { name: 'MS Excel', icon: 'vscode-icons:file-type-excel', category: 'tools', desc: 'Data analysis, spreadsheets, and complex formulas.' },
     { name: 'MS PowerPoint', icon: 'vscode-icons:file-type-powerpoint', category: 'tools', desc: 'Creating impactful presentations and slide decks.' },
@@ -151,7 +157,7 @@ function initIcons() {
 function initCursor() {
     const cursor = document.querySelector('.custom-cursor');
     const follower = document.querySelector('.cursor-follower');
-    
+
     if (!cursor || !follower) return;
 
     document.addEventListener('mousemove', (e) => {
@@ -176,7 +182,7 @@ function renderSkills(filter = 'all') {
     if (!container) return;
 
     const filteredSkills = filter === 'all' ? skills : skills.filter(s => s.category === filter);
-    
+
     container.innerHTML = filteredSkills.map((skill, index) => `
                     <div class="skill-tag glass-card reveal-up cursor-pointer hover:scale-105" data-skill-index="${index}">
                         <iconify-icon icon="${skill.icon}" width="24" height="24" ${skill.color ? `style="color: ${skill.color}"` : ''}></iconify-icon>
@@ -260,7 +266,7 @@ function initHeroAnimations() {
     // Split text animation for hero name
     const heroTitle = document.querySelector('.hero h1');
     if (heroTitle && !heroTitle.querySelector('.line-mask')) {
-        heroTitle.innerHTML = heroTitle.innerHTML.split('<br>').map(line => 
+        heroTitle.innerHTML = heroTitle.innerHTML.split('<br>').map(line =>
             `<div class="line-mask"><div class="line-content">${line}</div></div>`
         ).join('');
     }
@@ -275,26 +281,26 @@ function initHeroAnimations() {
         ease: 'power4.out',
         delay: 0.2
     })
-    .from('.reveal-text:not(.name)', {
-        y: 30,
-        opacity: 0,
-        duration: 1,
-        stagger: 0.1,
-        ease: 'power3.out'
-    }, '-=0.8')
-    .from('.hero-btns .btn', {
-        scale: 0.8,
-        opacity: 0,
-        duration: 0.8,
-        stagger: 0.1,
-        ease: 'back.out(1.7)'
-    }, '-=0.5')
-    .from('.scroll-indicator', {
-        opacity: 0,
-        y: -20,
-        duration: 1,
-        ease: 'power2.out'
-    }, '-=0.2');
+        .from('.reveal-text:not(.name)', {
+            y: 30,
+            opacity: 0,
+            duration: 1,
+            stagger: 0.1,
+            ease: 'power3.out'
+        }, '-=0.8')
+        .from('.hero-btns .btn', {
+            scale: 0.8,
+            opacity: 0,
+            duration: 0.8,
+            stagger: 0.1,
+            ease: 'back.out(1.7)'
+        }, '-=0.5')
+        .from('.scroll-indicator', {
+            opacity: 0,
+            y: -20,
+            duration: 1,
+            ease: 'power2.out'
+        }, '-=0.2');
 }
 
 function initScrollAnimations() {
@@ -480,7 +486,7 @@ function initContactForm() {
         const btn = form.querySelector('button[type="submit"]');
         const originalText = btn.innerHTML;
         const successMsg = document.getElementById('contact-success');
-        
+
         btn.innerHTML = '<i data-lucide="loader" class="spin w-4 h-4"></i> Sending...';
         lucide.createIcons();
 
@@ -491,7 +497,7 @@ function initContactForm() {
             form.reset();
             successMsg.classList.remove('hidden');
             successMsg.classList.add('flex');
-            
+
             setTimeout(() => {
                 successMsg.classList.add('hidden');
                 successMsg.classList.remove('flex');
@@ -548,7 +554,7 @@ function initCVDownload() {
             const originalText = downloadBtn.innerHTML;
             downloadBtn.innerHTML = '<i data-lucide="check"></i> Downloading...';
             if (window.lucide) lucide.createIcons();
-            
+
             setTimeout(() => {
                 downloadBtn.innerHTML = originalText;
                 if (window.lucide) lucide.createIcons();
