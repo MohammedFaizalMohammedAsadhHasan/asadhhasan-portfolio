@@ -536,7 +536,7 @@ const loader = document.getElementById('loader');
 const loaderText = document.querySelector('.loader-text');
 let count = 0;
 const interval = setInterval(() => {
-    count += Math.floor(Math.random() * 10) + 1;
+    count += Math.floor(Math.random() * 15) + 5;
     if (count >= 100) {
         count = 100;
         clearInterval(interval);
@@ -545,11 +545,11 @@ const interval = setInterval(() => {
             setTimeout(() => {
                 loader.style.display = 'none';
                 initHeroAnimations();
-            }, 800);
-        }, 500);
+            }, 400);
+        }, 200);
     }
     loaderText.textContent = count + '%';
-}, 50);
+}, 30);
 
 function initMobileMenu() {
     const toggle = document.querySelector('.mobile-toggle');
