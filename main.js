@@ -253,6 +253,8 @@ function renderProjects() {
 
 function renderTimeline() {
     const container = document.getElementById('timeline-container');
+    if (!container) return;
+
     container.innerHTML = timeline.map(item => `
         <div class="timeline-item">
             <div class="timeline-dot"></div>
