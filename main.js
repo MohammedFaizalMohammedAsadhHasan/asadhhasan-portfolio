@@ -173,6 +173,8 @@ function initCursor() {
 
 function renderSkills(filter = 'all') {
     const container = document.getElementById('skills-container');
+    if (!container) return;
+
     const filteredSkills = filter === 'all' ? skills : skills.filter(s => s.category === filter);
     
     container.innerHTML = filteredSkills.map((skill, index) => `
@@ -191,7 +193,9 @@ function renderSkills(filter = 'all') {
         });
     });
 
-    initScrollAnimations(); // Re-init scroll animations for new cards
+    if (typeof initScrollAnimations === 'function') {
+        initScrollAnimations();
+    }
 }
 
 function initSkillFilters() {
@@ -207,6 +211,8 @@ function initSkillFilters() {
 
 function renderProjects() {
     const container = document.getElementById('projects-container');
+    if (!container) return;
+
     container.innerHTML = projects.map(proj => `
         <div class="project-card glass-card">
             <div class="project-img">
