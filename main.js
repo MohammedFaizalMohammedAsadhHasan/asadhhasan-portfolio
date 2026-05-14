@@ -486,28 +486,48 @@ function initContactForm() {
     const form = document.getElementById('contact-form');
     if (!form) return;
 
-    form.addEventListener('submit', (e) => {
+    form.addEventListener('submit', async (e) => {
         e.preventDefault();
         const btn = form.querySelector('button[type="submit"]');
         const originalText = btn.innerHTML;
         const successMsg = document.getElementById('contact-success');
+        const formData = new FormData(form);
+        
+        // Use Web3Forms - Replace with your own Access Key from https://web3forms.com/
+        formData.append("access_key", "YOUR_ACCESS_KEY_HERE");
 
         btn.innerHTML = '<i data-lucide="loader" class="spin w-4 h-4"></i> Sending...';
-        lucide.createIcons();
+        if (window.lucide) lucide.createIcons();
 
-        // Simulate API call
-        setTimeout(() => {
-            btn.innerHTML = originalText;
-            lucide.createIcons();
-            form.reset();
-            successMsg.classList.remove('hidden');
-            successMsg.classList.add('flex');
+        try {
+            const response = await fetch("https://api.web3forms.com/submit", {
+                method: "POST",
+                body: formData
+            });
 
-            setTimeout(() => {
-                successMsg.classList.add('hidden');
-                successMsg.classList.remove('flex');
-            }, 3000);
-        }, 1500);
+            const result = await response.json();
+
+            if (result.success) {
+                btn.innerHTML = originalText;
+                if (window.lucide) lucide.createIcons();
+                form.reset();
+                successMsg.classList.remove('hidden');
+                successMsg.classList.add('flex');
+
+                setTimeout(() => {
+                    successMsg.classList.add('hidden');
+                    successMsg.classList.remove('flex');
+                }, 5000);
+            } else {
+                console.error("Submission failed:", result);
+                btn.innerHTML = 'Error! Try again';
+                setTimeout(() => btn.innerHTML = originalText, 3000);
+            }
+        } catch (error) {
+            console.error("Error submitting form:", error);
+            btn.innerHTML = 'Error! Try again';
+            setTimeout(() => btn.innerHTML = originalText, 3000);
+        }
     });
 }
 
