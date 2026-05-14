@@ -494,7 +494,7 @@ function initContactForm() {
         const formData = new FormData(form);
         
         // Use Web3Forms - Replace with your own Access Key from https://web3forms.com/
-        formData.append("access_key", "YOUR_ACCESS_KEY_HERE");
+        formData.append("access_key", "7564b57d-12e0-42ce-a4d4-5a38d9f08241");
 
         btn.innerHTML = '<i data-lucide="loader" class="spin w-4 h-4"></i> Sending...';
         if (window.lucide) lucide.createIcons();
